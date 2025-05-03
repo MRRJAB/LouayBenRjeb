@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revo Medical</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <!-- normalize css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation des sections */
+        section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Menu mobile */
+        .navbar-collapse {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 300px;
+            height: 100vh;
+            padding: 2rem;
+            background: white;
+            transition: right 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .navbar-collapse.show {
+            right: 0;
+        }
+
+        .navbar-hide-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .navbar-show-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+            .navbar-collapse {
+                position: static;
+                width: auto;
+                height: auto;
+                max-width: none;
+                padding: 0;
+                background: transparent;
+            }
+
+            .navbar-hide-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- header -->
+    <header class="header bg-blue">
+        <nav class="navbar bg-blue">
+            <div class="container flex">
+                <a href="index.php" class="navbar-brand">
+                    <img src="images/logo.png" alt="site logo">
+                </a>
+                <button type="button" class="navbar-show-btn">
+                    <img src="images/ham-menu-icon.png" alt="Menu">
+                </button>
+
+                <div class="navbar-collapse bg-white">
+                    <button type="button" class="navbar-hide-btn">
+                        <img src="images/close-icon.png" alt="Close">
+                    </button>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#services" class="nav-link">Service</a></li>
+                        <li class="nav-item"><a href="#doc-panel" class="nav-link">Doctors</a></li>
+                        <li class="nav-item"><a href="#package-service" class="nav-link">Departments</a></li>
+                        <li class="nav-item"><a href="#posts" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div> 
+            </div>
+        </nav>
+
+        <div id="home" class="header-inner text-white text-center">
+            <div class="container grid">
+                <div class="header-inner-left">
+                    <h1>your most trusted<br> <span>health partner</span></h1>
+                    <p class="lead">the best match services for you</p>
+                    <p class="text text-md">Bienvenue à l’hôpital Revo , un lieu dédié à votre santé, où chaque patient est au cœur de nos priorités. Ensemble, nous veillons à votre bien-être avec professionnalisme, écoute et compassion.</p>
+                    <div class="btn-group">
+                        <a href="#about" class="btn btn-white">Learn More</a>
+                        <a href="#contact" class="btn btn-light-blue">Contact us</a>
+                    </div>
+                </div>
+                <div class="header-inner-right">
+                    <img src="images/header.png" alt="Medical illustration">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end of header -->
+
+    <main>
+        <!-- about section -->
+        <section id="about" class="about py">
+            <div class="about-inner">
+                <div class="container grid">
+                    <div class="about-left text-center">
+                        <div class="section-head">
+                            <h2>About Us</h2>
+                            <div class="border-line"></div>
+                        </div>
+                        <p class="text text-lg">À l’hôpital Revo , nous plaçons la santé et le bien-être de nos patients au centre de notre mission. Grâce à une équipe médicale hautement qualifiée, des équipements de pointe et une approche humaine, nous nous engageons à offrir des soins de qualité, accessibles à tous. Depuis notre création, nous avons à cœur d’accompagner nos patients et leurs familles à chaque étape, avec écoute, respect et professionnalisme. Notre objectif est de bâtir une relation de confiance et d’améliorer sans cesse nos services pour répondre aux besoins de la communauté. !</p>
+                        <a href="#services" class="btn btn-white">Our Services</a>
+                    </div>
+                    <div class="about-right flex">
+                        <div class="img">
+                            <img src="images/about-img.png" alt="About us illustration">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- banner one -->
+        <section id="banner-one" class="banner-one text-center">
+            <div class="container text-white">
+                <blockquote class="lead"><i class="fas fa-quote-left"></i> When you are young and healthy, it never occurs to you that in a single second your whole life could change. <i class="fas fa-quote-right"></i></blockquote>
+                
+            </div>
+        </section>
+        
+
+        <!-- services section -->
+        <section id="services" class="services py">
+            <div class="container">
+                <div class="section-head text-center">
+                    <h2 class="lead">The Best Doctor gives the least medicines</h2>
+                    <p class="text text-lg">A perfect way to show your hospital services</p>
+                    <div class="line-art flex">
+                        <div></div>
+                        <img src="images/4-dots.png" alt="Decoration dots">
+                        <div></div>
+                    </div>
+                </div>
+                <div class="services-inner text-center grid">
+                    <article class="service-item">
+                        <div class="icon">
+                            <img src="images/service-icon-1.png" alt="Cardio Monitoring icon">
+                        </div>
+                        <h3>Cardio Monitoring</h3>
+                        <p class="text text-sm">À l’hôpital Revo , notre service de monitoring cardiaque assure une surveillance continue des patients à risque, grâce à des technologies avancées et une équipe spécialisée. Nous veillons à détecter rapidement toute anomalie pour offrir une prise en charge immédiate et sécurisée.</p>
+                    </article>
+
+                    <article class="service-item">
+                        <div class="icon">
+                            <img src="images/service-icon-2.png" alt="Medical Treatment icon">
+                        </div>
+                        <h3>Medical Treatment</h3>
+                        <p class="text text-sm">À l’hôpital Revo , notre service de traitements médicaux propose des soins adaptés à chaque patient, alliant expertise, technologies modernes et approche personnalisée. Notre objectif est de garantir des traitements efficaces et un accompagnement de qualité</p>
+                    </article>
+
+                    <article class="service-item">
+                        <div class="icon">
+                            <img src="images/service-icon-3.png" alt="Emergency Help icon">
+                        </div>
+                        <h3>Emergency Help</h3>
+                        <p class="text text-sm">À l’hôpital Revo, notre service d’urgence est disponible 24h/24 pour apporter une aide rapide et efficace en cas de besoin. Notre équipe expérimentée est prête à intervenir à tout moment pour garantir votre sécurité et votre santé.</p>
+                    </article>
+
+                    <article class="service-item">
+                        <div class="icon">
+                            <img src="images/service-icon-4.png" alt="First Aid icon">
+                        </div>
+                        <h3>First Aid</h3>
+                        <p class="text text-sm">À l’hôpital Revo, notre service de premiers secours intervient rapidement pour fournir des soins d’urgence essentiels. Que ce soit pour des blessures légères ou des situations plus graves, notre équipe est formée pour offrir une prise en charge immédiate et professionnelle.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        >
+
+        <!-- banner two section -->
+        <section id="banner-two" class="banner-two text-center">
+            <div class="container grid">
+                <div class="banner-two-left">
+                    <img src="images/banner-2-img.png" alt="Medical illustration">
+                </div>
+                <div class="banner-two-right">
+                    <p class="lead text-white">When you are young and healthy, it never occurs to you that in a single second your whole life could change.</p>
+                    <div class="btn-group">
+                        <a href="#about" class="btn btn-white">Learn More</a>
+                        <a href="#contact" class="btn btn-light-blue">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- doctors section -->
+        <section id="doc-panel" class="doc-panel py">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Our Best Doctors </h2>
+                </div>
+
+                <div class="doc-panel-inner grid">
+                    <div class="doc-panel-item">
+                        <div class="img flex">
+                            <img src="images/doc-1.png" alt="Doctor Samuel Goe">
+                            <div class="info text-center bg-blue text-white flex">
+                                <p class="lead">Karim Aouin</p>
+                                <p class="text-lg">Medicine</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doc-panel-item">
+                        <div class="img flex">
+                            <img src="images/doc-2.png" alt="Doctor Elizabeth Ira">
+                            <div class="info text-center bg-blue text-white flex">
+                                <p class="lead">Rim Dkhili</p>
+                                <p class="text-lg">Cardiology</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doc-panel-item">
+                        <div class="img flex">
+                            <img src="images/doc-3.png" alt="Doctor Tanya Collins">
+                            <div class="info text-center bg-blue text-white flex">
+                                <p class="lead">Chayma Ben Ahmed</p>
+                                <p class="text-lg">Medicine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+
+        <!-- package services section -->
+        <section id="package-service" class="package-service py text-center">
+            <div class="container">
+                <div class="package-service-head text-white">
+                    <h2>Package Service</h2>
+                    <p class="text text-lg">Best service package for you</p>
+                </div>
+                <div class="package-service-inner grid">
+                    <div class="package-service-item bg-white">
+                        <div class="icon flex">
+                            <i class="fas fa-phone fa-2x"></i>
+                        </div>
+                        <h3>Regular Case</h3>
+                        <p class="text text-sm">À l’hôpital Revo, notre service "Regular Case" offre une prise en charge régulière et personnalisée pour les patients nécessitant des soins non urgents. Nous assurons un suivi médical constant pour garantir leur bien-être. </p>
+                        
+                    </div>
+
+                    <div class="package-service-item bg-white">
+                        <div class="icon flex">
+                            <i class="fas fa-calendar-alt fa-2x"></i>
+                        </div>
+                        <h3>Serious Case</h3>
+                        <p class="text text-sm">À l’hôpital Revo, notre service "Serious Case" prend en charge les patients nécessitant des soins intensifs et spécialisés. Nous mettons en place un suivi médical rigoureux et des traitements adaptés à chaque situation.</p>
+                        
+                    </div>
+                    
+                    <div class="package-service-item bg-white">
+                        <div class="icon flex">
+                            <i class="fas fa-comments fa-2x"></i>
+                        </div>
+                        <h3>Emergency Case</h3>
+                        <p class="text text-sm">À l’hôpital Revo, notre service "Emergency Case" est disponible 24h/24 pour prendre en charge les situations d'urgence. Notre équipe expérimentée assure une intervention rapide et un traitement efficace pour chaque patient. </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- posts section -->
+        <section id="posts" class="posts py">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Latest Post</h2>
+                </div>
+                <div class="posts-inner grid">
+                    <article class="post-item bg-white">
+                        <div class="img">
+                            <img src="images/post-1.jpg" alt="Blog post 1">
+                        </div>
+                        <div class="content">
+                            <h4>Inspiring stories of person and family centered care during a global pandemic.</h4>
+                            <p class="text text-sm">In Tunisia, when a patient was hospitalized due to COVID-19 and could not see his family, the medical staff arranged virtual calls. </p>
+                            <p class="text text-sm">This allowed the patient to stay connected with his loved ones, offering emotional support that played a key role in his recovery.</p>
+                            <div class="info flex">
+                                <small class="text text-sm"><i class="fas fa-clock"></i> October 27, 2021</small>
+                                <small class="text text-sm"><i class="fas fa-comment"></i> 2047 comments</small>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post-item bg-white">
+                        <div class="img">
+                            <img src="images/post-2.jpg" alt="Blog post 2">
+                        </div>
+                        <div class="content">
+                            <h4>Inspiring stories of person and family centered care during a global pandemic.</h4>
+                            <p class="text text-sm">LA mother with COVID-19 in Tunisia was separated from her newborn</p>
+                            <p class="text text-sm">The healthcare team made sure she could see and speak to her baby via video calls, easing her anxiety and helping her feel connected during the difficult days in the hospital.</p>
+                            <div class="info flex">
+                                <small class="text text-sm"><i class="fas fa-clock"></i> October 27, 2021</small>
+                                <small class="text text-sm"><i class="fas fa-comment"></i> 788 comments</small>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post-item bg-white">
+                        <div class="img">
+                            <img src="images/post-3.jpg" alt="Blog post 3">
+                        </div>
+                        <div class="content">
+                            <h4>Inspiring stories of person and family centered care during a global pandemic.</h4>
+                            <p class="text text-sm">In Tunisia, a healthcare team noticed the emotional distress of isolated patients. They organized community outreach, encouraging patients to send messages to their families and receive updates.</p>
+                            <p class="text text-sm">This helped patients feel supported, even during isolation.
+
+                            </p>
+                            <div class="info flex">
+                                <small class="text text-sm"><i class="fas fa-clock"></i> October 27, 2021</small>
+                                <small class="text text-sm"><i class="fas fa-comment"></i> 226 comments</small>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- contact section -->
+        <section id="contact" class="contact py">
+            <div class="container grid">
+                <div class="contact-left">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.223628196805!2d10.999315315097298!3d35.62118428015885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130212d6f2d0a9a5%3A0x9e1a4b7e0c1b5a5a!2sBekalta%2C%20Tunisia!5e0!3m2!1sen!2stn!4v1620000000000!5m2!1sen!2stn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="contact-right text-white text-center bg-blue">
+                    <div class="contact-head">
+                        <h3 class="lead">Contact Us</h3>
+                        <p class="text text-md">Pour toute question ou information, n’hésitez pas à nous contacter. Notre équipe est à votre écoute et prête à vous aider.</p>
+                    </div>
+                    <form>
+                        <div class="form-element">
+                            <input type="text" class="form-control" placeholder="Your name">
+                        </div>
+                        <div class="form-element">
+                            <input type="email" class="form-control" placeholder="Your email">
+                        </div>
+                        <div class="form-element">
+                            <textarea rows="5" placeholder="Your Message" class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-white btn-submit">
+                            <i class="fas fa-arrow-right"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- footer  -->
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <div class="footer-inner text-white py grid">
+                <div class="footer-item">
+                    <h3 class="footer-head">about us</h3>
+                    <div class="icon">
+                        <img src="images/logo.png" alt="Revo Medical logo">
+                    </div>
+                    <p class="text text-md">Bienvenue à l’hôpital Revo , un lieu dédié à votre santé</p>
+                    <address>
+                        Revo Hospital <br>
+                        Bekalta , <br>
+                        Monastir ,<br>
+                        Tunisie
+                    </address>
+                </div>
+
+                <div class="footer-item">
+                    <h3 class="footer-head">tags</h3>
+                    <ul class="tags-list flex">
+                        <li>medical care</li>
+                        <li>emergency</li>
+                        <li>therapy</li>
+                        <li>surgery</li>
+                        <li>medication</li>
+                        <li>nurse</li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                    <h3 class="footer-head">Quick Links</h3>
+                    <ul>
+                        <li><a href="#services" class="text-white">Our Services</a></li>
+                        <li><a href="#package-service" class="text-white">Our Plan</a></li>
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                        <li><a href="#contact" class="text-white">Appointment Schedule</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                    <h3 class="footer-head">make an appointment</h3>
+                    <p class="text text-md">Nous sommes disponibles pour vous assister du lundi au vendredi  :  </p>
+                    <ul class="appointment-info">
+                        <li>8:00 AM - 11:00 AM</li>
+                        <li>2:00 PM - 05:00 PM</li>
+                        <li>8:00 PM - 11:00 PM</li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>RevoHospital@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+216 93 209 326</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <ul class="flex">
+                    <li><a href="#" class="text-white flex"> <i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" class="text-white flex"> <i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" class="text-white flex"> <i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- custom js -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sélectionnez tous les liens de navigation
+            const navLinks = document.querySelectorAll('.navbar-nav a');
+            
+           
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Empêche le comportement par défaut
+                    e.preventDefault();
+                    
+                    // Récupère l'ID de la section cible
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    // Fait défiler jusqu'à la section avec une animation douce
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Ferme le menu mobile si ouvert
+                        const navbarCollapse = document.querySelector('.navbar-collapse');
+                        if (navbarCollapse.classList.contains('show')) {
+                            navbarCollapse.classList.remove('show');
+                        }
+                    }
+                });
+            });
+            
+            // Gestion du menu mobile
+            const showBtn = document.querySelector('.navbar-show-btn');
+            const hideBtn = document.querySelector('.navbar-hide-btn');
+            
+            showBtn.addEventListener('click', function() {
+                document.querySelector('.navbar-collapse').classList.add('show');
+            });
+            
+            hideBtn.addEventListener('click', function() {
+                document.querySelector('.navbar-collapse').classList.remove('show');
+            });
+            
+            // Animation des sections au défilement
+            const sections = document.querySelectorAll('section');
+            
+            function checkScroll() {
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < window.innerHeight - 100) {
+                        section.classList.add('show');
+                    }
+                });
+            }
+            
+            // Vérifie au chargement
+            window.addEventListener('load', checkScroll);
+            // Vérifie lors du défilement
+            window.addEventListener('scroll', checkScroll);
+        });
+    </script>
+</body>
+</html>

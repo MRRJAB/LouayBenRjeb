@@ -1,0 +1,296 @@
+/**
+ * 1. Fix line-height
+ * 2. Stop txt resize iOS
+ */
+ html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ===================== */
+
+/**
+ * Kill default margin
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Force main → block (IE fix)
+ */
+main {
+  display: block;
+}
+
+/**
+ * Fix h1 size + margin
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping
+   ===================== */
+
+/**
+ * box-sizing FF + overflow IE/Edge
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+/**
+ * Mono font + 1em size
+ */
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Text
+   ===================== */
+
+/**
+ * No bg on links (IE10)
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * abbr: no border, dotted underline
+ */
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline dotted;
+}
+
+/**
+ * b/strong → real bold
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Mono font for code/kbd/samp
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/**
+ * small → 80% size
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * sub/sup → no line shift
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded
+   ===================== */
+
+/**
+ * img in links → no border
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ===================== */
+
+/**
+ * Inherit font, reset margin
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/**
+ * overflow → visible (IE/Edge)
+ */
+button,
+input {
+  overflow: visible;
+}
+
+/**
+ * No txt transform (btn/select)
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * btn look → iOS/Safari fix
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * No inner border (FF)
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Keep focus outline
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Reduce fldst padding (FF)
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * legend fixes → width, color, wrap
+ */
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+/**
+ * Align progress
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * textarea → auto scroll (IE10+)
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Fix chkbox/radio → IE10
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/**
+ * Fix +/- btns (Chrome)
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Fix search → Chrome/Safari
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/**
+ * No search decors (macOS)
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Upload btn → iOS/Safari style
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+/* Interactive
+   ===================== */
+
+/*
+ * details → block
+ */
+details {
+  display: block;
+}
+
+/*
+ * summary → list-item
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ===================== */
+
+/**
+ * template → hidden
+ */
+template {
+  display: none;
+}
+
+/**
+ * [hidden] → hidden
+ */
+[hidden] {
+  display: none;
+}
